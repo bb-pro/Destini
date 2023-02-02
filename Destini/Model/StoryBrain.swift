@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct storyBrain {
-    
+struct StoryBrain {
+    private var questionNumber = 0
     let story = [
         Story(
             title: "Your car has blown a tire on a winding road in the middle of nowhere with no cell phone reception. You decide to hitchhike. A rusty pickup truck rumbles to a stop next to you. A man with a wide brimmed hat with soulless eyes opens the passenger door for you and asks: 'Need a ride, boy?'.",
@@ -42,5 +42,15 @@ struct storyBrain {
         )
     ]
     
+    func getStoryText() -> String {
+        return story[questionNumber].storyTitle
+    }
+    
+    func getAnswerOptions() -> [String] {
+        var answerOptions: [String] = []
+        answerOptions.append(story[questionNumber].firstChoice)
+        answerOptions.append(story[questionNumber].secondChoice)
+        return answerOptions
+    }
     
 }
