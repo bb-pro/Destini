@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet var storyLabel: UILabel!
     @IBOutlet var firstChoiceButton: UIButton!
     @IBOutlet var secondChoiceButton: UIButton!
-    
+
     private var storyBrain = StoryBrain()
     
     override func viewDidLoad() {
