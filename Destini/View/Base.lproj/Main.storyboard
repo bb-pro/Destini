@@ -16,10 +16,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="GEi-IX-2d8">
-                                <rect key="frame" x="-35" y="0.0" width="465" height="932"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="u0U-eC-Lp8">
+                                <rect key="frame" x="-10" y="0.0" width="330" height="568"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="GEi-IX-2d8">
+                                        <rect key="frame" x="0.0" y="0.0" width="330" height="568"/>
+                                    </imageView>
+                                </subviews>
+                                <variation key="heightClass=compact-widthClass=compact" axis="vertical"/>
+                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QsB-D2-lmS">
                                 <rect key="frame" x="16" y="0.0" width="288" height="568"/>
                                 <subviews>
@@ -56,15 +61,20 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <variation key="heightClass=compact-widthClass=compact" axis="vertical"/>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="u0U-eC-Lp8" secondAttribute="bottom" id="CJz-Jw-aYM"/>
+                            <constraint firstItem="u0U-eC-Lp8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-10" id="Etq-DN-NM2"/>
                             <constraint firstItem="QsB-D2-lmS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Fka-Uh-3iv"/>
                             <constraint firstItem="QsB-D2-lmS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="M26-7a-6dS"/>
                             <constraint firstAttribute="trailing" secondItem="QsB-D2-lmS" secondAttribute="trailing" constant="16" id="gZN-NR-Xbg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QsB-D2-lmS" secondAttribute="bottom" id="lhr-N9-Rw1"/>
+                            <constraint firstItem="u0U-eC-Lp8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="pzM-Ik-sFD"/>
+                            <constraint firstAttribute="trailing" secondItem="u0U-eC-Lp8" secondAttribute="trailing" id="vWJ-ae-9tf"/>
                         </constraints>
                     </view>
                     <connections>
