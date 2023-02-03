@@ -7,6 +7,8 @@
 
 import UIKit
 
+var userAnswer: String = ""
+
 class ViewController: UIViewController {
     @IBOutlet var storyLabel: UILabel!
     @IBOutlet var firstChoiceButton: UIButton!
@@ -20,12 +22,17 @@ class ViewController: UIViewController {
     }
 
     @IBAction func choiceButtonPressed(_ sender: UIButton) {
+        
+        userAnswer = sender.currentTitle!
+        updateUI()
+        
     }
     
     func updateUI() {
-        storyLabel.text = storyBrain.getStoryText()
         firstChoiceButton.setTitle(storyBrain.getAnswerOptions()[0], for: .normal)
         secondChoiceButton.setTitle(storyBrain.getAnswerOptions()[1], for: .normal)
+        storyLabel.text = storyBrain.getStoryText()
+
     }
 
     

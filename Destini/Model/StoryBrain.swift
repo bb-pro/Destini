@@ -52,5 +52,14 @@ struct StoryBrain {
         answerOptions.append(story[questionNumber].secondChoice)
         return answerOptions
     }
+    mutating func nextStory() {
+        if userAnswer == story[questionNumber].firstChoice {
+            questionNumber = story[questionNumber].firstChoiceDestination
+        } else {
+            questionNumber = story[questionNumber].secondChoiceDestination
+        }
+    }
+    
+    
     
 }
